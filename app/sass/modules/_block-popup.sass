@@ -1,0 +1,43 @@
+.popup
+  +position(fixed, 0 null null 0)
+  width: 100%
+  height: 100%
+  overflow-y: auto
+  background-color: rgba(0,0,0,.6)
+  z-index: 10
+
+.popup__background
+  position: absolute
+  left: 0
+  +center(y)
+  width: 100%
+  overflow: hidden
+  span
+    display: block
+
+.popup__container
+  position: relative
+  padding: 2rem
+  +MQ(M)
+    position: absolute
+    left: 0
+    +center(y)
+    width: 100%
+
+.popup__content
+  width: 100%
+  height: auto
+  padding: 2rem 0
+  background-color: rgba(0,0,0,.8)
+  border: 1px solid $white
+  +MQ(M)
+    max-width: 600px
+    margin: 0 auto
+
+.popup__controls
+  text-align: left
+  margin-bottom: 2rem
+  +MQ(M)
+    max-width: 600px
+    margin: 0 auto 2rem
+    text-align: right

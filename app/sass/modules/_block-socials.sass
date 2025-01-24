@@ -1,0 +1,39 @@
+.socials
+  width: auto
+  padding: 2rem
+  z-index: 4
+  &.bottom-right
+    +position(absolute, null 0 0 null)
+  &.bottom-left
+    +position(absolute, null null 0 0)
+  &.top-left
+    +position(absolute, 0 null null 0)
+
+  ul
+    display: block
+    position: relative
+    width: 100%
+    height: auto
+    line-height: .9
+    li
+      display: inline-block
+      position: relative
+      line-height: .9
+      margin-right: 4px
+      &::after
+        display: inline-block
+        content: '/'
+        margin-left: 4px
+        font: normal 600 1.4rem/1.2 $default-font
+        text-transform: uppercase
+        color: $txt-bright
+      &:last-of-type
+        &::after
+          display: none
+      a
+        display: inline-block
+        font: normal 600 1.4rem/1.2 $default-font
+        text-transform: uppercase
+        color: $txt-bright
+        //.no-touch &:hover
+          color: $txt-crimson

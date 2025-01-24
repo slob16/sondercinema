@@ -1,0 +1,106 @@
+.inner
+  +position(absolute, 0 null null 0)
+  width: 100%
+  min-width: 320px
+  height: 100%
+  background-color: $black
+  overflow-y: auto
+  +MQ(XL)
+    height: 100%
+    padding-top: 0
+    overflow: hidden
+
+.about,
+.portfolio,
+.contact
+  display: none
+  +MQ(XL)
+    display: block
+
+.inner__background
+  +position(absolute, 0 null null 0)
+  width: 100%
+  overflow: hidden
+  padding-top: 62px
+  +MQ(XL)
+    +position(absolute, 0 null null 82px)
+    width: calc(50% - 82px)
+    padding-top: 10px
+
+.inner__controls
+  position: relative
+  width: 100%
+  padding: 2rem 0
+  background-color: $crimson
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  z-index: 3
+  &.controls-menu
+    +position(absolute, 0 null null 0)
+  +MQ(XL)
+    +position(absolute, 0 null null 0)
+    width: 82px
+    height: 100%
+
+.inner__info,
+.inner__media
+  position: relative
+  +MQ(XL)
+    height: 100%
+
+.blocks-container
+  padding: 100px 0
+  //opacity: 1
+  //transition: opacity .5s ease-in-out
+  +MQ(XL)
+    position: absolute
+    left: 82px
+    +center(y)
+    width: calc(100% - 82px)
+    padding: 0
+
+.media-container
+  position: relative
+  overflow: hidden
+  height: 568px
+  min-height: 568px
+  &.portfolio-container
+    height: auto
+  +MQ(M)
+    height: 760px
+    &.portfolio-container
+      height: auto
+  +MQ(XL)
+    height: 100%
+    &.portfolio-container
+      height: 100%
+
+.content-block
+  position: relative
+  width: 100%
+  padding: 0 2rem
+  margin-bottom: 4.8rem
+  &:last-of-type
+    margin-bottom: 0
+  &.grid-block
+    padding: 0 calc(2rem - 15px)
+  +MQ(XL)
+    &:last-of-type
+      margin-bottom: 0
+
+.image
+  position: relative
+  height: 568px
+  min-height: 568px
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  +MQ(M)
+    height: 760px
+  +MQ(XL)
+    height: 100%
+
+.image-caption
+  +position(absolute, null 0 0 null)
+  padding: 2rem

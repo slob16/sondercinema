@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+<style type="text/css">
+	.st0 {
+		fill: #E51743;
+	}
+	.st1 {
+		fill :#FFFFFF;
+	}
+	@media (prefers-color-scheme: dark) {
+		.st0 {
+			fill: #E51743;
+		}
+		.st1 {
+			fill: #FFFFFF;
+		}
+	}
+</style>
+<g>
+	<rect y="0.5" class="st0" width="500" height="500"/>
+	<path class="st1" d="M370.4,119.2v262.5h-60.8V274.1H190.4v107.6h-60.7V119.2h60.7v103.5h119.3V119.2H370.4z"/>
+</g>
+</svg>

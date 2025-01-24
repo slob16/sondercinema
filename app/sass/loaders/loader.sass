@@ -1,0 +1,99 @@
+
+   File name: loader.css
+  
+
+// Import Bourbon
+@import "bourbon"
+
+// Import Mixins and Common Variables
+@import "../partials/layout"
+@import "../partials/mixins"
+@import "../partials/variables"
+
+/* ------------------------------------------------*/
+/* Loader Styles Start
+/* ------------------------------------------------*/
+.loader
+  +position(fixed, 0 0 0 0)
+  z-index: 9999
+  background-color: transparent
+  opacity: 1
+  visibility: visible
+  transition: all .6s ease-in-out
+  &.loaded
+    opacity: 0
+    visibility: hidden
+  &.is-animated
+    .loader__content,
+    .loader__caption
+      animation: 0.3s 1s ease-in-out 1 both fadeOut
+
+.loader__container
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-color: $black
+
+.loader__content
+  position: absolute
+  +center
+  width: 100%
+  text-align: center
+
+.loader__text
+  font: normal 700 3.4rem/.94 "Arial", sans-serif
+  text-transform: uppercase
+  color: $txt-bright
+  span
+    display: block
+    white-space: nowrap
+    &.outline-white
+      +outline-text-white-1px
+    &.outline-colored
+      +outline-text-crimson-1px
+    animation: 1s ease-in-out 0.1s infinite fadeIn
+    &:nth-of-type(2)
+      animation: 1s ease-in-out 0.2s infinite fadeIn
+    &:nth-of-type(3)
+      animation: 1s ease-in-out 0.3s infinite fadeIn
+  img
+    display: block
+    width: 100%
+    height: auto
+  +MQ(M)
+    font-size: 5rem
+    span
+      &.outline-white
+        +outline-text-white-2px
+      &.outline-colored
+        +outline-text-crimson-2px
+  +MQ(XXL)
+    font-size: 6rem
+    span
+      &.outline-white
+        +outline-text-white-2px
+      &.outline-colored
+        +outline-text-crimson-2px
+
+.loader__caption
+  position: absolute
+  bottom: 20px
+  +center(x)
+  p, a
+    font: normal 500 1.2rem/1.2 "Arial", sans-serif
+    text-transform: uppercase
+    color: $txt-medium
+  a
+    color: $txt-medium
+
+@keyframes fadeIn
+  from
+    opacity: 0.1
+  to
+    opacity: 1
+
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity: 0

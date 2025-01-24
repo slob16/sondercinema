@@ -1,0 +1,11 @@
+{
+  "name": "Sonder Cinema Group",
+  "short_name": "Sonder",
+  "icons": [
+    { "src": "/img/favicon/favicon3light.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/img/favicon/favicon3light.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#e6e6e6",
+  "background_color": "272b35",
+  "display": "standalone"
+}

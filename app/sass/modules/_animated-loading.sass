@@ -1,0 +1,253 @@
+body
+  &.loaded
+    .main
+      .main__header
+        .sayhello-trigger,
+        .header__menubutton
+          transform: translate3d(0,0,0)
+          opacity: 1
+          transition: transform .5s .6s , opacity .5s .6s
+        .header__logo
+          transform: translateX(-50%) translateY(0)
+          opacity: 1
+          transition: transform .5s .6s , opacity .5s .6s
+      .main__intro
+        .headline
+          h1
+            transform: translateY(0)
+            opacity: 1
+            transition: transform .5s , opacity .5s
+          .headline__btnholder
+            transform: translateY(0)
+            opacity: 1
+            transition: transform .5s , opacity .5s
+        .intro__explore,
+        .socials
+          opacity: 1
+          transition: opacity .5s .6s
+      .main__media
+        .media__content
+          &::after
+            transform: translateX(100%)
+            transition: transform .5s 1.1s
+  &.main-slider
+  &.main-large-headline
+    &.loaded
+      .main
+        .main__header
+          .notify-trigger-top
+            transform: translate3d(0,0,0)
+            opacity: 1
+            transition: transform .5s .6s , opacity .5s .6s
+        .main__intro
+          .headline
+            .headline__text
+              transform: translateY(0)
+              opacity: 1
+              transition: transform .5s , opacity .5s
+  &.main-fullscreen
+    &.loaded
+      .main
+        .main__header
+          .header__logo
+            transform: translateX(-50%) translateY(0)
+            opacity: 1
+            transition: transform .5s .8s , opacity .5s .8s
+          .sayhello-trigger,
+          .header__menubutton,
+          .notify-trigger-top
+            transform: translate3d(0,0,0)
+            opacity: 1
+            transition: transform .5s .8s , opacity .5s .8s
+        .main__intro
+          .headline
+            h1
+              transform: translateY(0)
+              opacity: 1
+              transition: transform .5s , opacity .5s
+            .headline__countdownholder
+              transform: translateY(0)
+              opacity: 1
+              transition: transform .5s .2s , opacity .5s .2s
+        .socials.bottom-left
+          opacity: 1
+          transform: translate3d(0,0,0)
+          transition: transform .5s .8s , opacity .5s .8s
+        .intro__explore
+          &.absolute
+            opacity: 1
+            transition: opacity .5s .6s
+
+  +MQ(M)
+    &.main-fullscreen
+      &.loaded
+        .main
+          .main__intro
+          .socials.bottom-left,
+          .copyright
+            transform: translate3d(0,0,0)
+            opacity: 1
+            transition: transform .5s .8s , opacity .5s .8s
+          .intro__explore
+            &.absolute
+              transition: opacity .5s 1.6s
+  +MQ(XL)
+    &.loaded
+      .main
+        .main__media
+          .media__content
+            &::after
+              transform: translateX(100%)
+              transition: transform .5s 0s
+          .media__countdown
+            .countdown-caption,
+            .countdown
+              transform: translate3d(0,0,0)
+              opacity: 1
+              transition: transform .5s .8s , opacity .5s .8s
+        .main__intro
+          .headline
+            h1
+              transform: translateY(0)
+              opacity: 1
+              transition: transform .5s .4s , opacity .5s .4s
+            .headline__btnholder
+              transform: translateY(0)
+              opacity: 1
+              transition: transform .5s .4s , opacity .5s .4s
+          .socials
+            opacity: 1
+            transform: translate3d(0,0,0)
+            transition: transform .5s .8s , opacity .5s .8s
+          .intro__explore
+            transition: opacity .5s 1.6s
+        .main__header
+          .header__logo,
+          .sayhello-trigger,
+          .header__menubutton,
+          .notify-trigger-top
+            transition: transform .5s .8s , opacity .5s .8s
+    &.main-slider
+      &.loaded
+        .main
+          .main__media
+            .media__slider
+              .swiper-slide-1
+                .slide__caption,
+                .slide__number
+                  transform: translate3d(0,0,0)
+                  opacity: 1
+                  transition: transform .5s .8s , opacity .5s .8s
+              .swiper-button-next,
+              .swiper-button-prev
+                transform: translate3d(0,0,0)
+                opacity: 1
+                transition: transform .5s .8s , opacity .5s .8s
+    &.main-large-headline
+      &.loaded
+        .main
+          .main__header
+            .notify-trigger-top
+              transition: transform .5s .8s , opacity .5s .8s
+          .main__intro
+            .headline
+              h1,
+              .headline__text
+                transform: translateY(0)
+                opacity: 1
+                transition: transform .5s .4s , opacity .5s .4s
+          .main__media
+            .socials.top-left
+              transform: translate3d(0,0,0)
+              opacity: 1
+              transition: transform .5s .8s , opacity .5s .8s
+    &.main-fullscreen
+      &.loaded
+        .main
+          .main__intro
+            .headline
+              h1
+                transition: transform .5s 0s , opacity .5s 0s
+              .headline__countdownholder
+                transition: transform .5s .2s , opacity .5s .2s
+
+.main
+  .main__header
+    .sayhello-trigger,
+    .notify-trigger-top,
+    .header__menubutton.top-left
+      transform: translate3d(-2rem,-2rem,-2rem)
+      opacity: 0
+    .header__menubutton,
+    .notify-trigger-top.top-right-trigger
+      transform: translate3d(2rem,-2rem,2rem)
+      opacity: 0
+    .header__logo
+      left: 50%
+      right: auto
+      transform: translateX(-50%) translateY(-2rem)
+      opacity: 0
+  .main__intro
+    .headline
+      h1
+        transform: translateY(2rem)
+        opacity: 0
+      .headline__btnholder,
+      .headline__text,
+      .headline__countdownholder
+        transform: translateY(2rem)
+        opacity: 0
+  .intro__explore,
+  .socials
+    opacity: 0
+  .socials.bottom-left
+    opacity: 0
+    transform: translate3d(-2rem,2rem,-2rem)
+  .copyright
+    opacity: 0
+    transform: translate3d(2rem,2rem,-2rem)
+  .main__media
+    .media__content
+      overflow: hidden
+      &::after
+        content: ''
+        display: block
+        +position(absolute, 0 null null 0)
+        width: 100%
+        height: 100%
+        background-color: $black
+        transform: translateX(0)
+        z-index: 4
+  +MQ(XL)
+    .main__header
+      .sayhello-trigger,
+      .header__menubutton,
+      .notify-trigger-top
+        transform: translate3d(2rem,-2rem,2rem)
+    .main__intro
+      .socials
+        opacity: 0
+        transform: translate3d(2rem,2rem,-2rem)
+    .main__media
+      .media__countdown
+        .countdown-caption
+          transform: translate3d(-2rem,-2rem,-2rem)
+          opacity: 0
+        .countdown
+          opacity: 0
+          transform: translate3d(-2rem,2rem,-2rem)
+      .socials.top-left
+        transform: translate3d(-2rem,-2rem,-2rem)
+        opacity: 0
+      .media__slider
+        .swiper-slide-1
+          .slide__caption
+            transform: translate3d(-2rem,-2rem,-2rem)
+            opacity: 0
+          .slide__number
+            opacity: 0
+            transform: translate3d(-2rem,2rem,-2rem)
+        .swiper-button-next,
+        .swiper-button-prev
+          opacity: 0
+          transform: translate3d(-2rem,2rem,-2rem)

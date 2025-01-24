@@ -1,0 +1,40 @@
+.show-skillbar
+  display: block
+  padding: 0
+  margin-bottom: 2.4rem
+  &:last-of-type
+    margin-bottom: 0
+
+.skillbar
+  position: relative
+  width: 100%
+  height: 3rem
+  border-bottom: 1px solid rgba(255,255,255,0.1)
+
+.skillbar-title
+  +position(absolute, 0 null null 2px)
+  font: normal 600 1.6rem/1.1 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+  height: 3rem
+  line-height: 3rem
+
+.skillbar-bar
+  display: inline-block
+  +position(absolute, null null -1px 0)
+  width: 0px
+  height: 1px
+  background-color: $crimson
+
+.skill-bar-percent
+  display: block
+  +position(absolute, 0 2px null null)
+  font: normal 600 1.6rem/1.1 $default-font
+  color: $txt-bright
+  height: 3rem
+  line-height: 3rem
+
+/* Remove or comment out skillbar styles */
+.skillbar, .show-skillbar {
+  display: none; /* or remove these styles */
+}

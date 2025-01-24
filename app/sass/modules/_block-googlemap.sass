@@ -1,0 +1,54 @@
+.map
+  position: relative
+  width: 100%
+  height: 568px
+  min-height: 568px
+  +MQ(M)
+    height: 760px
+  +MQ(XL)
+    height: 100%
+
+#google-container
+  position: relative
+  width: 100%
+  height: 568px
+  min-height: 568px
+  +MQ(M)
+    height: 760px
+  +MQ(XL)
+    height: 100%
+
+#google-map
+  position: relative
+  height: 100%
+  +MQ(XL)
+    width: 100%
+
+#zoom-in, #zoom-out
+  position: relative
+  height: 3.4rem
+  width: 3.4rem
+  line-height: 3.6rem
+  margin-right: 2rem
+  font-size: 1.4rem
+  color: $txt-bright
+  text-align: center
+  overflow: hidden
+  cursor: pointer
+  background-color: $crimson
+
+  .btn-icon
+    position: relative
+    color: $txt-bright
+    transition: color .3s
+
+  +MQ(XL)
+  .no-touch &:hover
+    .btn-icon
+      //color: $txt-white
+    .btn-hover
+      transform: translateX(0) rotate(0deg)
+
+#zoom-out
+  margin-top: 1rem
+  margin-bottom: 2rem

@@ -1,0 +1,89 @@
+.swiper
+  width: 100%
+  height: 568px
+  //background-color: pink
+  +MQ(M)
+    height: 760px
+  +MQ(L)
+    width: 100%
+    height: 100%
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next,
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev
+  background-image: none
+
+.swiper-button-prev,
+.swiper-button-next
+  width: auto
+  height: auto
+  +position(absolute, auto auto 2rem auto)
+  margin: 0
+  background: none
+  font: normal 600 1.4rem/1.2 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+
+.swiper-button-prev
+  left: 2rem
+  margin-right: 8px
+  &::after
+    content: "/"
+    display: inline-block
+    margin-left: 8px
+    font: normal 600 1.4rem/1.2 $default-font
+    text-transform: uppercase
+    color: $txt-bright
+
+.swiper-button-next
+  left: 8.1rem
+  &::after
+    display: none
+
+.swiper-slide
+  position: relative
+  width: 100%
+  height: 100%
+  //background-color: red
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.slide__info
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+
+.slide__caption
+  +position(absolute, 0 null null 0)
+  padding: 2rem
+  span
+    display: block
+    font: normal 600 1.4rem/1.2 $default-font
+    text-transform: uppercase
+    color: $txt-crimson
+  p
+    font: normal 600 1.4rem/1.2 $default-font
+    text-transform: uppercase
+    color: $txt-bright
+
+.slide__number
+  +position(absolute, null null 4.3rem -.4rem)
+  padding: 0 2rem
+  p
+    font: normal 700 7rem/.9 $default-font
+    text-transform: uppercase
+    color: $txt-bright
+  span
+    font: normal 700 7rem/.9 $default-font
+    +outline-text-white-1px
+  +MQ(M)
+    p
+      font-size: 13.4rem
+    span
+      font-size: 13.4rem
+      +outline-text-white-2px
+  +MQ(XXL)
+    p, span
+      font-size: 18rem

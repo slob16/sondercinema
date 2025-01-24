@@ -1,0 +1,228 @@
+.my-gallery
+  figure
+    position: relative
+    margin: 0
+    overflow: hidden
+    cursor: pointer
+
+    figcaption
+      +position(absolute, null null 0 0)
+      width: 100%
+      height: 100%
+      padding: 2rem
+      z-index: 1
+
+      .works-description__caption
+        +position(absolute, 2rem null null 2rem)
+        text-transform: uppercase
+        color: $txt-bright
+        background-color: $black
+        padding: .4rem .8rem
+        span
+          font: normal 500 1.2rem/1.2 $default-font
+
+      h4
+        display: block
+        +position(absolute, null null 2rem 2rem)
+        width: calc(100% - 4rem)
+        span
+          display: inline-block
+          font: normal 700 1.6rem/1.2 $default-font
+          text-transform: uppercase
+          color: $txt-bright
+          background-color: $black
+          padding: .4rem .8rem
+          margin-bottom: .5rem
+        small
+          display: inline-block
+          font: normal 500 1.2rem/1.2 $default-font
+          text-transform: uppercase
+          color: $txt-bright
+          background-color: $black
+          padding: .4rem .8rem
+      p
+        display: none
+
+    +MQ(XL)
+      height: 50vh
+      background-color: $white
+
+      figcaption
+        .works-description__caption
+          background-color: transparent
+          overflow: hidden
+          &::before
+            content: ''
+            display: block
+            +position(absolute, 0 null null 0)
+            width: 100%
+            height: 100%
+            background-color: $black
+            z-index: 0
+            transform: translateY(100%)
+            transition: transform .3s .1s ease-in-out
+          span
+            display: block
+            position: relative
+            opacity: 0
+            z-index: 1
+            transition: opacity .3s ease-in-out
+        h4
+          span
+            position: relative
+            background-color: transparent
+            overflow: hidden
+            &::before
+              content: ''
+              display: block
+              +position(absolute, 0 null null 0)
+              width: 100%
+              height: 100%
+              background-color: $black
+              z-index: 0
+              transform: translateY(102%)
+              transition: transform .3s .1s ease-in-out
+            strong
+              display: block
+              position: relative
+              opacity: 0
+              z-index: 1
+              transition: opacity .3s ease-in-out
+          small
+            position: relative
+            background-color: transparent
+            overflow: hidden
+            &::before
+              content: ''
+              display: block
+              +position(absolute, 0 null null 0)
+              width: 100%
+              height: 100%
+              background-color: $black
+              z-index: 0
+              transform: translateY(101%)
+              transition: transform .3s .1s ease-in-out
+            em
+              display: block
+              position: relative
+              background-color: transparent
+              opacity: 0
+              z-index: 1
+              transition: opacity .3s ease-in-out
+
+      img
+        width: auto
+        height: 50vh
+
+      .works-image
+        opacity: 0
+
+      .works-link
+        position: relative
+        float: left
+        width: 100%
+        height: 100%
+        overflow: hidden
+        text-align: center
+
+        .picture
+          +position(absolute, 0 null null 0)
+          width: 100%
+          height: 100%
+          background-repeat: no-repeat
+          background-position: center center
+          background-size: cover
+          transition: background-position .5s
+          transition: transform .7s , opacity .5s ease-in-out
+
+    +MQ(XXL)
+      figcaption
+        .works-description__caption
+          font-size: 1.4rem
+        h4
+          small
+            font-size: 1.4rem
+
+    .no-touch &:hover
+      figcaption
+        .works-description__caption
+          &::before
+            transform: translateY(0)
+            transition: transform .3s ease-in-out
+          span
+            opacity: 1
+            transition: opacity .3s .1s ease-in-out
+        h4
+          span
+            &::before
+              transform: translateY(0)
+              transition: transform .3s ease-in-out
+            strong
+              opacity: 1
+              transition: opacity .3s .1s ease-in-out
+          small
+            &::before
+              transform: translateY(0)
+              transition: transform .3s ease-in-out
+            em
+              opacity: 1
+              transition: opacity .3s .1s ease-in-out
+      .works-link
+        .picture
+          transform: scale3d(1.06,1.06,1)
+          opacity: 0.2
+
+.pswp__caption__center
+  max-width: 400px
+  .works-description__caption
+    display: none
+    font: normal 500 1.2rem/1.2 $default-font
+    text-transform: uppercase
+    color: $txt-bright
+  h4
+    font: normal 600 1.8rem/1.1 $default-font
+    text-transform: uppercase
+    color: $txt-bright
+    margin-bottom: 1.4rem
+    transform: translateY(0)
+  small
+    display: block
+    font: normal 500 1.2rem/1.2 $default-font
+    text-transform: uppercase
+    color: $txt-bright
+    margin-top: 1.4rem
+    transform: translateY(0)
+  p
+    font: normal 300 1.4rem/1.4 $default-font
+    color: $txt-medium
+
+.pswp__counter
+  font: normal 600 1.6rem/44px $default-font
+  color: $txt-bright
+
+.pswp__button--close
+  opacity: 1
+
+.pswp__button--arrow--left::before, .pswp__button--arrow--right::before
+  width: 44px
+  height: 44px
+
+.pswp__button--arrow--left:before
+  left: 0
+  background-position: -132px -44px
+
+.pswp__button--arrow--right:before
+  right: 0
+  background-position: -88px -44px
+
+.pswp__bg
+  background: tint($black, 5%)
+
+.pswp__caption, .pswp__top-bar
+  background-color: rgba(0,0,0,.3)
+
+.pswp__button--close
+  position: relative
+  background-color: $crimson
+  &:active
+    opacity: 1

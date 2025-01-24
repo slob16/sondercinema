@@ -1,0 +1,159 @@
+h1
+  font: normal 700 3.6rem/.9 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+  span
+    &.outline-white
+      +outline-text-white-1px
+    &.outline-colored
+      +outline-text-crimson-1px
+    &.colored
+      color: $txt-crimson
+  &.medium
+    font-size: 8rem
+    span
+      &.outline-white
+        +outline-text-white-2px
+      &.outline-colored
+        +outline-text-crimson-2px
+  &.large
+    font-size: 5rem
+    span
+      &.outline-white
+        +outline-text-white-1px
+      &.outline-colored
+        +outline-text-crimson-1px
+  +MQ(M)
+    &.large
+      font-size: 13.4rem
+      span
+        &.outline-white
+          +outline-text-white-2px
+        &.outline-colored
+          +outline-text-crimson-2px
+  +MQ(XXL)
+    font-size: 5.2rem
+    &.medium
+      font-size: 11rem
+    &.large
+      font-size: 18rem
+
+h2
+  font: normal 700 3.4rem/1 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+  margin-bottom: 2rem
+  span
+    &.outline-white
+      +outline-text-white-1px
+    &.outline-colored
+      +outline-text-crimson-1px
+    &.colored
+      color: $txt-crimson
+  small
+    display: block
+    font: normal 500 1.6rem/1.2 $default-font
+    margin-top: 2.4rem
+  +MQ(XXL)
+    font-size: 5rem
+    small
+      font-size: 1.8rem
+
+h3
+  font: normal 600 1.8rem/1.1 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+
+h4
+  font: normal 600 1.6rem/1.1 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+
+.gallery-subtitle
+  display: block
+  font: normal 500 1.2rem/1 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+.gallery-caption
+  display: block
+  font: normal 500 1.2rem/1 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+
+p
+  font: normal 300 1.6rem/1.4 $default-font
+  color: $txt-medium
+  span
+    font-weight: 500
+    color: $txt-bright
+
+.headline__text
+  font: normal 500 1.6rem/1.2 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+  +MQ(XXL)
+    font-size: 1.6rem
+    max-width: 650px
+
+a
+  font: normal 500 1.6rem/1.4 $default-font
+  color: $txt-bright
+  //.no-touch &:hover
+    color: $txt-crimson
+
+.section-caption
+  display: block
+  position: relative
+  opacity: .5
+  font: normal 700 13.4rem/.84 $default-font
+  text-transform: uppercase
+  +outline-text-crimson-1px
+  &.bright
+    opacity: 1
+  &.left
+    right: 32px
+    text-align: left
+  &.right
+    left: 32px
+    text-align: right
+  +MQ(M)
+    font-size: 13.4rem
+    &.left
+      right: 42px
+    &.right
+      left: 42px
+  +MQ(XXL)
+    font-size: 18rem
+    &.left
+      right: 62px
+    &.right
+      left: 62px
+
+.image-caption
+  text-align: right
+  p
+    font: normal 500 1.4rem/1.1 $default-font
+    text-transform: uppercase
+    color: $txt-bright
+    span
+      display: block
+
+.popup-title__title
+  font: normal 700 3.4rem/1 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+  span
+    font: normal 700 3.4rem/1 $default-font
+    &.outline-white
+      +outline-text-white-1px
+    &.outline-colored
+      +outline-text-crimson-1px
+    &.colored
+      color: $txt-crimson
+
+.popup-title__text
+  display: block
+  font: normal 500 1.6rem/1.2 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+  margin-top: 2.4rem

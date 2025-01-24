@@ -1,0 +1,94 @@
+.form-container
+  position: relative
+
+.form
+  opacity: 1
+  transition: opacity $animation-duration - .3s ease-in-out
+  &.is-hidden
+    opacity: 0
+
+form
+  position: relative
+  width: 100%
+  input, textarea
+    position: relative
+    display: block
+    width: 100%
+    border: none
+    outline: none
+    margin: 0
+    padding: 0
+    background-color: transparent
+    padding: 1.2rem 1rem
+    font: normal 400 1.4rem/1.6 $default-font
+    transition: border .3s
+  input
+    height: 4.4rem
+    margin: 0 0 2rem 0
+  textarea
+    height: 12rem
+    resize: none
+    margin: 0 0 .8rem 0
+  .inputs-description
+    display: block
+    width: 100%
+    margin-bottom: 1.2rem
+    text-align: right
+    font: normal 400 1.2rem/1 $default-font
+
+.notify-form
+  input
+    margin: 0 0 .8rem 0
+
+.form-light
+  input, textarea
+    font-weight: 300
+  ::-webkit-input-placeholder
+    color: $txt-muted
+  :-moz-placeholder
+    color: $txt-muted
+  ::-moz-placeholder
+    color: $txt-muted
+  :-ms-input-placeholder
+    color: $txt-muted
+  input:focus:required:invalid,
+  textarea:focus:required:invalid
+    color: $txt-bright
+  input:required:valid,
+  textarea:required:valid
+    color: $txt-bright
+  input, textarea
+    border: 1px solid $white
+    color: $txt-bright
+    &:focus
+      border: 1px solid $crimson
+  .inputs-description
+    color: $txt-muted
+
+.reply-group
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  transition: opacity .5s ease-in-out
+  &.is-visible
+    opacity: 1
+
+.reply-group__icon
+  display: block
+  position: relative
+  font-size: 4rem
+  line-height: 1
+  color: $crimson
+
+.reply-group__title
+  font: normal 600 1.8rem/1.1 $default-font
+  text-transform: uppercase
+  color: $txt-bright
+  margin-top: .7rem
+
+.reply-group__text
+  display: block
+  font: normal 300 1.4rem/1.4 $default-font
+  color: $txt-medium
+  margin-top: .2rem
